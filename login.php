@@ -1,7 +1,14 @@
 <?php
 session_start();
 include 'db.php';  // Include database connection
+header("Access-Control-Allow-Origin: *"); // Allow requests from any origin
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
 
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit();
+}
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = trim($_POST["username"]);
     $password = trim($_POST["password"]);
