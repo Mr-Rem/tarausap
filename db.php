@@ -1,8 +1,8 @@
 <?php
-$host = "localhost";  // Change to your InfinityFree database host
-$username = "root";
-$password = "";
-$database = "tara_usap";
+$host = "sql106.infinityfree.com";  // Change to your InfinityFree database host
+$username = "if0_38503942";
+$password = "ESorSC5ZzK";
+$database = "if0_38503942_XXX";
 
 $conn = new mysqli($host, $username, $password, $database);
 
